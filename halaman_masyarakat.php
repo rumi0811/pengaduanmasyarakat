@@ -13,6 +13,13 @@ if (isset($_GET['url'])){
         include 'lihat_pengaduan.php'; // url untuk memuat halaman
         break; 
 
+        case 'detail_pengaduan'; // url nya dari masyarakat.php        
+        include 'detail_pengaduan.php'; // url untuk memuat halaman
+        break; 
+
+        case 'lihat_tanggapan';
+        include 'lihat_tanggapan.php';
+        break;
     }
 }else{
     ?> 
