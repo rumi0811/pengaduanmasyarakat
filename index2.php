@@ -37,9 +37,9 @@
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang! <br> Website <br> Pengaduan Masyarakat</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang! Admin/Petugas<br> Website <br> Pengaduan Masyarakat</h1>
                   </div>
-                  <form class="user" method="post" action="cek_login.php">
+                  <form class="user" method="post" action="cek_login2.php">
                     <div class="form-group">
                       <input type="text" name="username" class="form-control form-control-user" placeholder="Masukkan Username...">
                     </div>
@@ -49,17 +49,6 @@
                     <input type="submit" class="btn btn-primary btn-user btn-block" value="Masuk">
                     <hr>
                   </form>
-                  <div class="text-center">
-                    Belum Punya Akun?
-                    <br>
-                    <a class="small" href="register.php">Daftar Sekarang!</a>
-                  </div>
-                  <hr>
-
-                  <div class="text-center">
-                    <a class="small" href="index2.php">Masuk Sebagai Admin/Petugas!</a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

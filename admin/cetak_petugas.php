@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,74 +15,76 @@
   <title>SB Admin 2 - Tables</title>
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
   <!-- Custom styles for this page -->
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
+<body id="page-top">
+  
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Data Pengaduan Saya</h6>
+              
             </div>
             <div class="card-body">
+
+            <h3 class="m-0 font-weight-bold text-secondary" align="center">Perum. Griya Alam Sentosa</h3>
+            <h4 class="m-0 font-weight-bold text-secondary" align="center">jln. Lencana merah blok BB5/31 RT 16/08</h4>
+            
+                <br>
+                <br>
+                <hr>
+              <h5 class="m-0 font-weight-bold text-secondary" align="center">Laporan Petugas</h5><br>
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
+                  
                     <tr>
-                      <!-- <th>No</th> -->
-                      <th>Tanggal</th>
-                      <!-- <th>NIK</th> -->
-                      <th>Isi Laporan</th>
-                      <th>Foto</th>
-                      <th>Status</th>
-                      <th>Aksi</th>
+                      <th>Id Petugas</th>
+                      <th>Nama Petugas</th>
+                      <th>Username Petugas</th>
+                      <th>Password Petugas</th>
+                      <th>Telp Petugas</th>
+                      <th>Level Petugas</th>
                     </tr>
-                  </thead>
+                 
+
                   <?php
-                  require 'koneksi.php';
+                  require '../koneksi.php';
                 //   yang ditampilkan adalah nik yang sudah login. jadi yang ditampilkan pengaduan diri sendiri, pengaduan orang lain gak ditampilkan
-                  $sql = mysql_query("select * from pengaduan where nik='$_SESSION[nik]'");
+                  $sql = mysql_query("select * from petugas ");
                   while ($data = mysql_fetch_array($sql)){
 
                     ?>
                   <tbody>
                     <tr>
-                      <!-- <td><?php echo $data['id_pengaduan']; ?></td> -->
-                      <td><?php echo $data['tgl_pengaduan']; ?></td>
-                      <!-- <td><?php echo $data['nik']; ?></td> -->
-                      <td><?php echo $data['isi_laporan']; ?></td>
-                      <td><img src="foto/<?php echo $data['foto']; ?>" width="200px"></td>
-                      <td><?php echo $data['status']; ?></td> 
-                      <td>
-                        <!-- button untuk aksi -->
-                        <a href="?url=detail_pengaduan&id=<?php echo $data['id_pengaduan']; ?>" class="btn btn-info btn-icon-split">
-                            <span class="icon text-white-50">
-                                <i class="fas fa-info"></i>
-                            </span>
-                            <span class="text">Detail</span>
-                        </a>
-
-                        <a href="?url=lihat_tanggapan&id=<?php echo $data['id_pengaduan']; ?>" class="btn btn-primary btn-icon-split">
-                            <span class="icon text-white-50">
-                                <i class="fas fa-eye"></i>
-                            </span>
-                            <span class="text">Lihat Tanggapan</span>
-                        </a>
-
-
-                      </td>                     
+                      <td><?php echo $data['id_petugas'] ?></td>
+                      <td><?php echo $data['nama_petugas'] ?></td>
+                      <td><?php echo $data['username'] ?></td>
+                      <td><?php echo $data['password'] ?></td>
+                      <td><?php echo $data['telp'] ?></td>
+                      <td><?php echo $data['level'] ?></td>                  
                     </tr>                    
                   </tbody>
                   <?php } ?>
-                </table>
+                </table>                
               </div>
+              <br>
+                <br>
+                <h5 class="m-0 font-weight-bold text-secondary" align="right">Bekasi, <?php echo date('d m Y') ?></h5>
+
+                <h5 class="m-0 font-weight-bold text-secondary" align="right">Petugas, </h5>
+                <br>
+                <br>
+                <br>
+                <h5 class="m-0 font-weight-bold text-secondary" align="right"><?php echo $_SESSION['nama']; ?></h5>
+                
             </div>
           </div>
 
@@ -93,7 +98,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+          
           </div>
         </div>
       </footer>
@@ -130,21 +135,21 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="../js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
+  <script src="../js/demo/datatables-demo.js"></script>
 
 </body>
 
