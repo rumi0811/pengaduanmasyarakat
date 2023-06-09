@@ -75,7 +75,7 @@
                   <hr>
 
                   <div class="text-center">
-                    <a class="small" href="">Masuk Sebagai Admin/Petugas!</a>
+                    <a class="small" href="index2.php">Masuk Sebagai Admin/Petugas!</a>
                   </div>
                 </div>
               </div>

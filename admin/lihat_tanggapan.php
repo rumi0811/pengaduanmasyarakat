@@ -26,49 +26,41 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Data Pengaduan Masyarakat </h6>
+              <h6 class="m-0 font-weight-bold text-primary">Data Laporan</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <!-- <th>No</th> -->
-                      <th>Tanggal</th>
-                      <!-- <th>NIK</th> -->
-                      <th>Isi Laporan</th>
-                      <th>Foto</th>
-                      <th>Status</th>
-                      <th>Aksi</th>
+                      <!-- <th>Id Petugas</th> -->
+                      <th>Nama Petugas</th>
+                      <th>Isi Tanggapan</th>
+                      <th>Tanggal Tanggapan</th>
+                      <!-- <th>Telp Petugas</th>
+                      <th>Level Petugas</th>
+                      <th>Aksi</th> -->
                     </tr>
                   </thead>
+
                   <?php
                   require '../koneksi.php';
                 //   yang ditampilkan adalah nik yang sudah login. jadi yang ditampilkan pengaduan diri sendiri, pengaduan orang lain gak ditampilkan
-                  $sql = mysql_query("select * from pengaduan where status = '0'");
+                  $sql = mysql_query("select * from petugas, tanggapan where petugas.id_petugas=tanggapan.id_petugas ");
                   while ($data = mysql_fetch_array($sql)){
 
                     ?>
                   <tbody>
                     <tr>
-                      <!-- <td><?php echo $data['id_pengaduan']; ?></td> -->
-                      <td><?php echo $data['tgl_pengaduan']; ?></td>
-                      <!-- <td><?php echo $data['nik']; ?></td> -->
-                      <td><?php echo $data['isi_laporan']; ?></td>
-                      <td><img src="../foto/<?php echo $data['foto']; ?>" width="200px"></td>
-                      <td><?php echo $data['status']; ?></td> 
-                      <td>
-                        <!-- button untuk aksi -->
-                        <a href="?url=detail_pengaduan&id=<?php echo $data['id_pengaduan']; ?>" class="btn btn-info btn-icon-split">
-                            <span class="icon text-white-50">
-                                <i class="fas fa-check"></i>
-                            </span>
-                            <span class="text">Verifikasi</span>
-                        </a>  
+                      <td><?php $no =1; echo $data['nama_petugas'] ?></td>
+                      <td><?php echo $data['tanggapan'] ?></td>
+                      <td><?php echo $data['tgl_tanggapan'] ?></td>
+                      <!-- <td><?php echo $data['password'] ?></td>
+                      <td><?php echo $data['telp'] ?></td>
+                      <td><?php echo $data['level'] ?></td> -->
+                      <!-- <td>
 
-
-
-                      </td>                     
+                      </td>                      -->
                     </tr>                    
                   </tbody>
                   <?php } ?>
@@ -87,7 +79,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; </span>
+          <span>Copyright &copy; Kelompok 1 - Pengaduan Masyarakat</span>
           </div>
         </div>
       </footer>

@@ -48,6 +48,14 @@
         </a>
 
         
+        <a href="hapus_pengaduan.php?id_pengaduan=<?php echo $data['id_pengaduan']; ?>" class="btn btn-danger btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                            <span class="text">Hapus</span>
+                        </a>  
+
+        
             <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
                     
                 <div class="form-group cols-sm-6">

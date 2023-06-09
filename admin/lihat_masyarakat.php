@@ -29,11 +29,7 @@
               <h6 class="m-0 font-weight-bold text-primary">Data Masyarakat</h6>
             </div>
             <div class="card-body">
-                <a href="admin.php?url=tambah_petugas" class="btn btn-primary btn-icon-split">
-                        <span class="icon text-white-50">
-                          <i class="fas fa-plus"></i>
-                        </span>
-                </a>
+
                 <br>
                 <br>
               <div class="table-responsive">
@@ -43,7 +39,7 @@
                       <th>NIK</th>
                       <th>Nama Masyarakat</th>
                       <th>Username Masyarakat</th>
-                      <th>Password Masyarakat</th>
+                      <!-- <th>Password Masyarakat</th> -->
                       <th>Telp Masyarakat</th>
                       <th>Aksi</th>
                     </tr>
@@ -62,7 +58,7 @@
                       <td><?php echo $data['nik'] ?></td>
                       <td><?php echo $data['nama'] ?></td>
                       <td><?php echo $data['username'] ?></td>
-                      <td><?php echo $data['password'] ?></td>
+                      <!-- <td><?php echo $data['password'] ?></td> -->
                       <td><?php echo $data['telp'] ?></td>
                      
                       <td>

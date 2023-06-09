@@ -41,7 +41,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Id Petugas</th>
+                      <!-- <th>Id Petugas</th> -->
                       <th>Nama Petugas</th>
                       <th>Username Petugas</th>
                       <th>Password Petugas</th>
@@ -60,7 +60,7 @@
                     ?>
                   <tbody>
                     <tr>
-                      <td><?php echo $data['id_petugas'] ?></td>
+                      <!-- <td><?php $no =1; echo $data['id_petugas'] ?></td> -->
                       <td><?php echo $data['nama_petugas'] ?></td>
                       <td><?php echo $data['username'] ?></td>
                       <td><?php echo $data['password'] ?></td>

@@ -19,7 +19,6 @@ if (isset($_GET['url'])){
         case 'lihat_petugas';
         include 'lihat_petugas.php';
         break;
-
         
         case 'tambah_petugas';
         include 'tambah_petugas.php';
@@ -31,11 +30,31 @@ if (isset($_GET['url'])){
 
         case 'preview_petugas';
         include 'preview_petugas.php';
-        break;    
+        break;
+        
+        case 'preview_masyarakat';
+        include 'preview_masyarakat.php';
+        break; 
+        
+        case 'preview_pengaduan';
+        include 'preview_pengaduan.php';
+        break; 
+
+        case 'preview_tanggapan';
+        include 'preview_tanggapan.php';
+        break; 
 
         case 'lihat_masyarakat';
         include 'lihat_masyarakat.php';
         break;  
+
+        case 'lihat_laporan';
+        include 'lihat_laporan.php';
+        break;  
+
+        case 'lihat_tanggapan';
+        include 'lihat_tanggapan.php';
+        break; 
         
     }
 }else{

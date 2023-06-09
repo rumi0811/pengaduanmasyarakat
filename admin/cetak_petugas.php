@@ -41,12 +41,12 @@ session_start();
                 <br>
                 <br>
                 <hr>
-              <h5 class="m-0 font-weight-bold text-secondary" align="center">Laporan Petugas</h5><br>
+              <h5 class="m-0 font-weight-bold text-secondary" align="center">Laporan Data Petugas</h5><br>
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   
                     <tr>
-                      <th>Id Petugas</th>
+                      <!-- <th>Id Petugas</th> -->
                       <th>Nama Petugas</th>
                       <th>Username Petugas</th>
                       <th>Password Petugas</th>
@@ -64,7 +64,7 @@ session_start();
                     ?>
                   <tbody>
                     <tr>
-                      <td><?php echo $data['id_petugas'] ?></td>
+                      <!-- <td><?php echo $data['id_petugas'] ?></td> -->
                       <td><?php echo $data['nama_petugas'] ?></td>
                       <td><?php echo $data['username'] ?></td>
                       <td><?php echo $data['password'] ?></td>

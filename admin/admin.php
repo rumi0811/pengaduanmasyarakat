@@ -83,8 +83,8 @@ if($_SESSION['level']!="admin"){
             <h6 class="collapse-header">Data-data</h6>
             <a class="collapse-item" href="?url=lihat_petugas">Data Petugas</a>
             <a class="collapse-item" href="?url=lihat_masyarakat">Data Masyarakat</a>
-            <a class="collapse-item" href="">Data Laporan</a>
-            <a class="collapse-item" href="">Data Tanggapan</a>
+            <a class="collapse-item" href="?url=lihat_laporan">Data Laporan</a>
+            <a class="collapse-item" href="?url=lihat_tanggapan">Data Tanggapan</a>
           </div>
         </div>
       </li>
@@ -97,11 +97,11 @@ if($_SESSION['level']!="admin"){
         </a>
         <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Laporan-laporan</h6>
-            <a class="collapse-item" href="?url=preview_petugas">Laporan Petugas</a>
-            <a class="collapse-item" href="">Laporan Masyarakat</a>
-            <a class="collapse-item" href="">Laporan Pengaduan</a>
-            <a class="collapse-item" href="">Laporan Tanggapan</a>
+            <h6 class="collapse-header">Print Data</h6>
+            <a class="collapse-item" href="?url=preview_petugas">Data Petugas</a>
+            <a class="collapse-item" href="?url=preview_masyarakat">Data Masyarakat</a>
+            <a class="collapse-item" href="?url=preview_pengaduan">Data Pengaduan</a>
+            <a class="collapse-item" href="?url=preview_tanggapan">Data Tanggapan</a>
           </div>
         </div>
       </li>
